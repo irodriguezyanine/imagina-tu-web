@@ -17,7 +17,13 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "IMAGINATUWEB.CL | Tu sitio web profesional en tiempo récord",
   description:
-    "Diseño web humano, pago único, sin cuotas mensuales. Evita Wix y Squarespace. Un desarrollador real te asesora y construye tu sitio a medida.",
+    "Diseña invitaciones, web profesionales, o lo que quieras.",
+  openGraph: {
+    title: "IMAGINATUWEB.CL | Tu sitio web profesional en tiempo récord",
+    description:
+      "Diseña invitaciones, web profesionales, o lo que quieras.",
+    url: "https://www.imaginatuweb.cl",
+  },
   keywords: [
     "diseño web",
     "sitio web Chile",
