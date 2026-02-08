@@ -121,11 +121,13 @@ const FEATURES = [
   },
 ];
 
+type FeatureItem = (typeof FEATURES)[number];
+
 function FeatureModal({
   feature,
   onClose,
 }: {
-  feature: (typeof FEATURES)[number];
+  feature: FeatureItem;
   onClose: () => void;
 }) {
   const Icon = feature.icon;
@@ -196,9 +198,9 @@ function FeatureModal({
 }
 
 export function DespedidaLanding() {
-  const [modalFeature, setModalFeature] = useState<(typeof FEATURES)[number] | null>(null);
+  const [modalFeature, setModalFeature] = useState<FeatureItem | null>(null);
 
-  return (
+  const content = (
     <div role="main" className="min-h-screen bg-slate-950">
       {/* Hero: foto de fiesta de fondo + overlay morado */}
       <section
@@ -420,4 +422,6 @@ export function DespedidaLanding() {
       </AnimatePresence>
     </div>
   );
+
+  return content;
 }
