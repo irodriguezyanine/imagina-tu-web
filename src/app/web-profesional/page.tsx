@@ -1,4 +1,5 @@
 import { WebProfesionalLanding } from "@/components/WebProfesionalLanding";
+import { HeroBg } from "@/components/HeroBg";
 
 export const metadata = {
   title: "Web para profesionales | Portfolio y contacto | ImaginaTuWeb",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function WebProfesionalPage() {
-  return <WebProfesionalLanding />;
+  return (
+    <WebProfesionalLanding>
+      <HeroBg src="/web-profesional-bg.png" />
+    </WebProfesionalLanding>
+  );
 }

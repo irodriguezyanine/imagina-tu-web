@@ -6,12 +6,14 @@ import {
   type CumpleanosFeatureItem,
 } from "@/components/CumpleanosLandingContent";
 
-export function CumpleanosLanding() {
+export function CumpleanosLanding({ children }: { children?: React.ReactNode }) {
   const [modalFeature, setModalFeature] = useState<CumpleanosFeatureItem | null>(null);
   return (
     <CumpleanosLandingContent
       modalFeature={modalFeature}
       setModalFeature={setModalFeature}
-    />
+    >
+      {children}
+    </CumpleanosLandingContent>
   );
 }

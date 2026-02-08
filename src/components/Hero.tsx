@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, LayoutGrid, Wallet, Globe, Receipt } from "lucide-react";
+import { MessageCircle, LayoutGrid, Wallet, Globe, Receipt, CreditCard, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { WHATSAPP } from "@/lib/constants";
@@ -10,6 +10,8 @@ const miniCards = [
   { label: "Pago único", icon: Wallet },
   { label: "Dominio incluido", icon: Globe },
   { label: "Costos transparentes", icon: Receipt },
+  { label: "Recibe y después paga", icon: CreditCard },
+  { label: "Sin costos de mantención", icon: ShieldCheck },
 ];
 
 export function Hero() {

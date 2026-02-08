@@ -182,24 +182,16 @@ function FeatureModal({
 type Props = {
   modalFeature: WebEmpresasFeatureItem | null;
   setModalFeature: (f: WebEmpresasFeatureItem | null) => void;
+  children?: React.ReactNode;
 };
 
-export function WebEmpresasLandingContent({ modalFeature, setModalFeature }: Props) {
+export function WebEmpresasLandingContent({ modalFeature, setModalFeature, children }: Props) {
   return (
     <div role="main" className="min-h-screen bg-stone-950">
       <section
         className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden"
       >
-        <div className="absolute inset-0">
-          <img
-            src="/web-empresas-bg.png"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
+        {children}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/75 to-stone-950/90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(255,255,255,0.04),transparent_60%)]" />
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/50 to-transparent" />

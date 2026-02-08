@@ -6,12 +6,14 @@ import {
   type EventosFeatureItem,
 } from "@/components/EventosLandingContent";
 
-export function EventosLanding() {
+export function EventosLanding({ children }: { children?: React.ReactNode }) {
   const [modalFeature, setModalFeature] = useState<EventosFeatureItem | null>(null);
   return (
     <EventosLandingContent
       modalFeature={modalFeature}
       setModalFeature={setModalFeature}
-    />
+    >
+      {children}
+    </EventosLandingContent>
   );
 }

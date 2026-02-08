@@ -1,4 +1,5 @@
 import { CumpleanosLanding } from "@/components/CumpleanosLanding";
+import { HeroBg } from "@/components/HeroBg";
 
 export const metadata = {
   title: "Web para cumpleaños | Invitación digital | ImaginaTuWeb",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function CumpleanosPage() {
-  return <CumpleanosLanding />;
+  return (
+    <CumpleanosLanding>
+      <HeroBg src="/cumpleanos-bg.png" />
+    </CumpleanosLanding>
+  );
 }

@@ -37,6 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preload" href="/cumpleanos-bg.png" as="image" />
+        <link rel="preload" href="/despedida-fiesta-bg.png" as="image" />
+        <link rel="preload" href="/matrimonios-bg.png" as="image" />
+        <link rel="preload" href="/eventos-bg.png" as="image" />
+        <link rel="preload" href="/web-profesional-bg.png" as="image" />
+        <link rel="preload" href="/web-empresas-bg.png" as="image" />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >

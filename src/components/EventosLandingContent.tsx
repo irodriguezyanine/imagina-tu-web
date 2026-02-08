@@ -194,24 +194,16 @@ function FeatureModal({
 type Props = {
   modalFeature: EventosFeatureItem | null;
   setModalFeature: (f: EventosFeatureItem | null) => void;
+  children?: React.ReactNode;
 };
 
-export function EventosLandingContent({ modalFeature, setModalFeature }: Props) {
+export function EventosLandingContent({ modalFeature, setModalFeature, children }: Props) {
   return (
     <div role="main" className="min-h-screen bg-stone-950">
       <section
         className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden"
       >
-        <div className="absolute inset-0">
-          <img
-            src="/eventos-bg.png"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
+        {children}
         <div className="absolute inset-0 bg-gradient-to-b from-orange-900/75 via-amber-800/70 to-stone-950/85" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(255,255,255,0.05),transparent_60%)]" />
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/50 to-transparent" />

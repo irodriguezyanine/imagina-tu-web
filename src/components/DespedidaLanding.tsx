@@ -6,12 +6,14 @@ import {
   type FeatureItem,
 } from "@/components/DespedidaLandingContent";
 
-export function DespedidaLanding() {
+export function DespedidaLanding({ children }: { children?: React.ReactNode }) {
   const [modalFeature, setModalFeature] = useState<FeatureItem | null>(null);
   return (
     <DespedidaLandingContent
       modalFeature={modalFeature}
       setModalFeature={setModalFeature}
-    />
+    >
+      {children}
+    </DespedidaLandingContent>
   );
 }

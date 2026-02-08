@@ -6,12 +6,14 @@ import {
   type MatrimonioFeatureItem,
 } from "@/components/MatrimonioLandingContent";
 
-export function MatrimonioLanding() {
+export function MatrimonioLanding({ children }: { children?: React.ReactNode }) {
   const [modalFeature, setModalFeature] = useState<MatrimonioFeatureItem | null>(null);
   return (
     <MatrimonioLandingContent
       modalFeature={modalFeature}
       setModalFeature={setModalFeature}
-    />
+    >
+      {children}
+    </MatrimonioLandingContent>
   );
 }

@@ -6,12 +6,14 @@ import {
   type WebProfesionalFeatureItem,
 } from "@/components/WebProfesionalLandingContent";
 
-export function WebProfesionalLanding() {
+export function WebProfesionalLanding({ children }: { children?: React.ReactNode }) {
   const [modalFeature, setModalFeature] = useState<WebProfesionalFeatureItem | null>(null);
   return (
     <WebProfesionalLandingContent
       modalFeature={modalFeature}
       setModalFeature={setModalFeature}
-    />
+    >
+      {children}
+    </WebProfesionalLandingContent>
   );
 }

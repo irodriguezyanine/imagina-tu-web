@@ -1,4 +1,5 @@
 import { MatrimonioLanding } from "@/components/MatrimonioLanding";
+import { HeroBg } from "@/components/HeroBg";
 
 export const metadata = {
   title: "Web para tu boda | Invitación digital | ImaginaTuWeb",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function MatrimoniosPage() {
-  return <MatrimonioLanding />;
+  return (
+    <MatrimonioLanding>
+      <HeroBg src="/matrimonios-bg.png" />
+    </MatrimonioLanding>
+  );
 }

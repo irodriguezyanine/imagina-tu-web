@@ -1,4 +1,5 @@
 import { DespedidaLanding } from "@/components/DespedidaLanding";
+import { HeroBg } from "@/components/HeroBg";
 
 export const metadata = {
   title: "Web para despedidas de soltero | ImaginaTuWeb",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function DespedidasSolteroPage() {
-  return <DespedidaLanding />;
+  return (
+    <DespedidaLanding>
+      <HeroBg src="/despedida-fiesta-bg.png" />
+    </DespedidaLanding>
+  );
 }

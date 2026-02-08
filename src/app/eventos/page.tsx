@@ -1,4 +1,5 @@
 import { EventosLanding } from "@/components/EventosLanding";
+import { HeroBg } from "@/components/HeroBg";
 
 export const metadata = {
   title: "Web para eventos | Congresos, lanzamientos, fiestas | ImaginaTuWeb",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function EventosPage() {
-  return <EventosLanding />;
+  return (
+    <EventosLanding>
+      <HeroBg src="/eventos-bg.png" />
+    </EventosLanding>
+  );
 }
