@@ -1,10 +1,15 @@
 import { CumpleanosLanding } from "@/components/CumpleanosLanding";
 import { HeroBg } from "@/components/HeroBg";
+import { PAGE_META, canonicalUrl } from "@/lib/seo";
+
+const meta = PAGE_META["/cumpleanos"];
 
 export const metadata = {
-  title: "Web para cumpleaños | Invitación digital | ImaginaTuWeb",
-  description:
-    "Crea tu web de cumpleaños con invitación, lista de regalos, dinámicas y juegos, galería de fotos y más. Un solo link para compartir con tus invitados.",
+  title: meta.title,
+  description: meta.description,
+  keywords: meta.keywords,
+  openGraph: { title: meta.title, description: meta.description },
+  alternates: { canonical: canonicalUrl(meta.path ?? "/cumpleanos") },
 };
 
 export default function CumpleanosPage() {

@@ -1,10 +1,15 @@
 import { EventosLanding } from "@/components/EventosLanding";
 import { HeroBg } from "@/components/HeroBg";
+import { PAGE_META, canonicalUrl } from "@/lib/seo";
+
+const meta = PAGE_META["/eventos"];
 
 export const metadata = {
-  title: "Web para eventos | Congresos, lanzamientos, fiestas | ImaginaTuWeb",
-  description:
-    "Web para cualquier evento: congresos, lanzamientos, fiestas. Programa, mapas, inscripción y un solo link para tus asistentes.",
+  title: meta.title,
+  description: meta.description,
+  keywords: meta.keywords,
+  openGraph: { title: meta.title, description: meta.description },
+  alternates: { canonical: canonicalUrl(meta.path ?? "/eventos") },
 };
 
 export default function EventosPage() {

@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE, KEYWORDS_STRING, PAGE_META } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -14,25 +16,57 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const defaultMeta = PAGE_META["/"];
+
 export const metadata: Metadata = {
-  title: "IMAGINATUWEB.CL | Tu sitio web profesional en tiempo récord",
-  description:
-    "Diseña invitaciones, web profesionales, o lo que quieras.",
-  openGraph: {
-    title: "IMAGINATUWEB.CL | Tu sitio web profesional en tiempo récord",
-    description:
-      "Diseña invitaciones, web profesionales, o lo que quieras.",
-    url: "https://www.imaginatuweb.cl",
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: defaultMeta.title,
+    template: "%s",
   },
-  keywords: [
-    "diseño web",
-    "sitio web Chile",
-    "landing page",
-    "pago único",
-    "desarrollo web",
-  ],
+  description: defaultMeta.description,
+  keywords: KEYWORDS_STRING,
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  formatDetection: { email: true, telephone: true },
+  openGraph: {
+    type: "website",
+    locale: "es_CL",
+    url: SITE.url,
+    siteName: SITE.name,
+    title: defaultMeta.title,
+    description: defaultMeta.description,
+    images: [
+      {
+        url: "/logo.png",
+        width: 660,
+        height: 144,
+        alt: SITE.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultMeta.title,
+    description: defaultMeta.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  verification: {
+    google: "192a8e16308794bb",
+  },
   icons: {
     icon: "/favicon.png",
+  },
+  alternates: {
+    canonical: SITE.url,
   },
 };
 
@@ -44,6 +78,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <JsonLd />
         <link rel="preload" href="/cumpleanos-bg.png" as="image" />
         <link rel="preload" href="/despedida-fiesta-bg.png" as="image" />
         <link rel="preload" href="/matrimonios-bg.png" as="image" />

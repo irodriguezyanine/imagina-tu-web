@@ -1,10 +1,15 @@
 import { WebProfesionalLanding } from "@/components/WebProfesionalLanding";
 import { HeroBg } from "@/components/HeroBg";
+import { PAGE_META, canonicalUrl } from "@/lib/seo";
+
+const meta = PAGE_META["/web-profesional"];
 
 export const metadata = {
-  title: "Web para profesionales | Portfolio y contacto | ImaginaTuWeb",
-  description:
-    "Tu presencia online: portfolio, servicios, contacto. Web a medida para freelancers, consultores y profesionales.",
+  title: meta.title,
+  description: meta.description,
+  keywords: meta.keywords,
+  openGraph: { title: meta.title, description: meta.description },
+  alternates: { canonical: canonicalUrl(meta.path ?? "/web-profesional") },
 };
 
 export default function WebProfesionalPage() {
