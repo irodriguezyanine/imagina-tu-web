@@ -1,0 +1,6 @@
+# Reglas del proyecto ImaginaTuWeb
+
+## Estructura de landings y páginas
+- **Toda la lógica de cada página/landing debe ir en archivos nuevos**, sin alargar archivos existentes cuando sea posible.
+- Para landings con mucho contenido (ej. Despedida de soltero, Matrimonios): usar un componente contenedor mínimo (ej. `XLanding.tsx`) que solo tenga estado y `return <XLandingContent />`, y **todo el JSX y la lógica en un archivo separado** (ej. `XLandingContent.tsx`).
+- Mantener los archivos acotados y la lógica por feature en su propio módulo.
