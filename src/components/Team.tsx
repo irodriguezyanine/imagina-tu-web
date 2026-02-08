@@ -45,8 +45,7 @@ export function Team() {
             </h3>
             <p className="text-[#25D366] font-semibold mb-3">CEO & Fundador</p>
             <p className="text-slate-600 leading-relaxed max-w-xl">
-              Ingeniero Comercial UDD. Lidera Vedisa Remates y fundó CÓRTATE.CL.
-              Experiencia en ventas B2B, SaaS y desarrollo de negocios en LATAM.
+              Soy Ingeniero Comercial con más de cinco años de experiencia en ventas B2B y desarrollo de negocios. Siempre me ha apasionado la tecnología y la inteligencia artificial; hace poco empecé a crear páginas web por curiosidad y descubrí que tenía un talento natural para el diseño y la comunicación digital. Esa combinación —visión comercial, pasión por la IA y capacidad para materializar ideas en la web— me llevó a crear Imagina Tu Web: un espacio para ayudar a emprendedores y pequeños negocios a tener una presencia online profesional, sin que la falta de presupuesto o conocimientos técnicos les impida dar el salto.
             </p>
           </div>
         </motion.div>
