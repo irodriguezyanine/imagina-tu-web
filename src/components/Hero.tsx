@@ -19,7 +19,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="text-sm font-medium text-slate-500 uppercase tracking-widest mb-6"
         >
-          Diseño web humano en tiempo récord
+          Diseño web con IA
         </motion.p>
         
         <motion.h1
@@ -28,9 +28,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 leading-tight tracking-tight"
         >
-          Tu sitio web profesional en tiempo récord.
-          <br />
-          <span className="text-slate-600">Trato humano, pago único.</span>
+          Tu sitio web profesional en un día.
         </motion.h1>
         
         <motion.p
@@ -39,8 +37,15 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
         >
-          Sin cuotas mensuales. Un desarrollador real te asesora, diseña tu sitio a medida
-          y lo entrega listo. Olvídate de Wix y Squarespace.
+          Cuéntame qué necesitas y trataremos de hacerlo realidad.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mt-3 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+        >
+          Pago único en el dominio que quieras (.cl o .com), transparentamos todos los costos y te enseñamos si quieres.
         </motion.p>
         
         <motion.div
@@ -63,7 +68,7 @@ export function Hero() {
             Cotizar por WhatsApp
           </Link>
           <Link
-            href="#showcase"
+            href="/portafolio"
             className={cn(
               "inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold",
               "border-2 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50",

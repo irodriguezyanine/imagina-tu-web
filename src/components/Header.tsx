@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/eventos", label: "Eventos" },
   { href: "/web-profesional", label: "Web profesional" },
   { href: "/web-empresas", label: "Web empresas" },
+  { href: "/portafolio", label: "Portafolio" },
 ];
 
 export function Header() {
