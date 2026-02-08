@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "pago único",
     "desarrollo web",
   ],
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
