@@ -200,8 +200,10 @@ export function DespedidaLanding() {
 
   return (
     <div role="main" className="min-h-screen bg-slate-950">
-      {/* Hero: foto de fiesta de fondo + overlay morado para que se vea la imagen */}
-      <section className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden">
+      {/* Hero: foto de fiesta de fondo + overlay morado */}
+      <section
+        className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden"
+      >
         <div className="absolute inset-0">
           <Image
             src="/despedida-fiesta-bg.png"
