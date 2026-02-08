@@ -199,7 +199,7 @@ export function DespedidaLanding() {
   const [modalFeature, setModalFeature] = useState<(typeof FEATURES)[number] | null>(null);
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <div role="main" className="min-h-screen bg-slate-950">
       {/* Hero: foto de fiesta de fondo + overlay morado para que se vea la imagen */}
       <section className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden">
         <div className="absolute inset-0">
@@ -416,6 +416,6 @@ export function DespedidaLanding() {
           />
         )}
       </AnimatePresence>
-    </main>
+    </div>
   );
 }
