@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { WHATSAPP } from "@/lib/constants";
 
@@ -21,8 +22,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-lg">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6 max-w-7xl mx-auto">
-        <Link href="/" className="text-xl font-bold text-slate-900 shrink-0">
-          IMAGINATUWEB.CL
+        <Link
+          href="/"
+          className="shrink-0 flex items-center focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded"
+          aria-label="Ir a inicio - ImaginaTuWeb"
+        >
+          <Image
+            src="/logo.png"
+            alt="ImaginaTuWeb"
+            width={220}
+            height={48}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
