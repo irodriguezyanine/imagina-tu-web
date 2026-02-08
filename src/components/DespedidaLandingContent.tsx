@@ -20,6 +20,7 @@ import {
 import { WHATSAPP } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
+import { CategoryPricing } from "@/components/CategoryPricing";
 
 const FEATURES = [
   {
@@ -370,6 +371,15 @@ export function DespedidaLandingContent({ modalFeature, setModalFeature, childre
           </ul>
         </div>
       </section>
+
+      <CategoryPricing
+        theme="fuchsia"
+        title="Precios para tu web de despedida de soltero"
+        minPrice={50000}
+        maxPrice={120000}
+        whatsappMessage="Hola, quiero cotizar mi web de despedida de soltero"
+        whatsappLabel="Pedir mi web de despedida"
+      />
 
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-900/95 via-violet-900 to-indigo-900/95" />

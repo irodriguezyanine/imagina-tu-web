@@ -22,6 +22,7 @@ import {
 import { WHATSAPP } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
+import { CategoryPricing } from "@/components/CategoryPricing";
 
 const FEATURES = [
   {
@@ -394,6 +395,15 @@ export function CumpleanosLandingContent({ modalFeature, setModalFeature, childr
           </ul>
         </div>
       </section>
+
+      <CategoryPricing
+        theme="amber"
+        title="Precios para tu web de cumpleaños"
+        minPrice={50000}
+        maxPrice={300000}
+        whatsappMessage="Hola, quiero cotizar mi web de cumpleaños"
+        whatsappLabel="Pedir mi web de cumpleaños"
+      />
 
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/95 via-stone-900 to-orange-950/80" />

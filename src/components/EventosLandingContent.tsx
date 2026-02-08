@@ -19,6 +19,7 @@ import {
 import { WHATSAPP } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
+import { CategoryPricing } from "@/components/CategoryPricing";
 
 const FEATURES = [
   {
@@ -364,6 +365,15 @@ export function EventosLandingContent({ modalFeature, setModalFeature, children 
           </ul>
         </div>
       </section>
+
+      <CategoryPricing
+        theme="orange"
+        title="Precios para la web de tu evento"
+        minPrice={150000}
+        maxPrice={800000}
+        whatsappMessage="Hola, quiero cotizar la web para mi evento"
+        whatsappLabel="Cotizar por WhatsApp"
+      />
 
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-900/95 via-stone-900 to-amber-950/80" />

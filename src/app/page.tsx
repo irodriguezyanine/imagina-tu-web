@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { LivePreviews } from "@/components/LivePreviews";
+import { Pricing } from "@/components/Pricing";
 import { Footer } from "@/components/Footer";
 import { PAGE_META } from "@/lib/seo";
 
@@ -20,6 +21,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <LivePreviews />
+      <Pricing />
       <Footer />
     </main>
   );

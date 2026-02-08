@@ -19,6 +19,7 @@ import {
 import { WHATSAPP } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/Footer";
+import { CategoryPricing } from "@/components/CategoryPricing";
 
 const FEATURES = [
   {
@@ -352,6 +353,15 @@ export function WebEmpresasLandingContent({ modalFeature, setModalFeature, child
           </ul>
         </div>
       </section>
+
+      <CategoryPricing
+        theme="blue"
+        title="Precios para la web de tu empresa"
+        minPrice={100000}
+        maxPrice={1000000}
+        whatsappMessage="Hola, quiero cotizar la web para mi empresa"
+        whatsappLabel="Cotizar por WhatsApp"
+      />
 
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-stone-900 to-indigo-950/80" />
