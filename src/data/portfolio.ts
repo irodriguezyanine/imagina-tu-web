@@ -44,8 +44,17 @@ export const portfolioCategories = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    id: "despedida-biotti",
-    title: "Despedida de Solteros Biotti",
+    id: "imaginatuweb",
+    title: "Imaginatuweb.cl",
+    category: "comercio",
+    description: "Tu web profesional en tiempo récord. De la idea a la realidad en menos de 24 horas, con pago único, dominio incluido y sin costos de mantención.",
+    liveUrl: "https://imaginatuweb.cl",
+    tags: ["Landing", "Emprendimientos", "Pago único", "WhatsApp"],
+    imageUrl: "/portfolio/imaginatuweb.png",
+  },
+  {
+    id: "despedida-solteros",
+    title: "Despedida de solteros",
     category: "eventos",
     description: "La Última Vuelta — Floripa 2026. Countdown, cronograma de vuelos, lista de crew.",
     liveUrl: "https://despedidabiotti.vercel.app",
@@ -53,13 +62,13 @@ export const portfolioProjects: PortfolioProject[] = [
     imageUrl: "/portfolio/despedida-biotti.png",
   },
   {
-    id: "dra-daniela-vera",
-    title: "Dra. Daniela Vera Osorio",
+    id: "dentista-ejemplo",
+    title: "Ejemplo página de dentista",
     category: "profesionales",
-    description: "Cirujana Dentista — Consultorio profesional con agenda WhatsApp, tratamientos y credenciales.",
+    description: "Sitio corporativo de consultorio dental: servicios, formación, agenda por WhatsApp y contacto.",
     liveUrl: "https://dra-daniela-vera.vercel.app",
-    tags: ["Consultorio", "WhatsApp", "Credenciales", "Mapa"],
-    imageUrl: "/portfolio/dra-daniela-vera.png",
+    tags: ["Odontología", "WhatsApp", "Landing", "HTML/CSS"],
+    imageUrl: "/portfolio/dentista-ejemplo.png",
   },
   {
     id: "cortate-cl",

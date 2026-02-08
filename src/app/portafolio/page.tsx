@@ -9,6 +9,48 @@ import { Team } from "@/components/Team";
 
 const projects = [
   {
+    id: "imaginatuweb",
+    title: "Imaginatuweb.cl",
+    tagline: "Tu web profesional en tiempo récord",
+    url: "https://imaginatuweb.cl",
+    images: [
+      { src: "/portfolio/imaginatuweb.png", alt: "Página de inicio de Imagina Tu Web" },
+    ],
+    description: "Sitio de presentación del servicio de creación de páginas web profesionales para emprendimientos y pymes. Propuesta de valor clara: de la idea a la realidad en menos de 24 horas. Incluye beneficios como pago único, dominio incluido, costos transparentes, opción de recibir y después pagar, y sin costos de mantención. Se capacita al cliente para que tome el control sin depender de proveedores externos. Navegación por categorías (cumpleaños, despedidas, matrimonios, eventos, web profesional, web empresas) y llamadas a la acción: cotizar por WhatsApp, ver portafolio y crear mi página.",
+    highlights: [
+      "Diseño minimalista y profesional, enfocado en usabilidad y propuesta de valor.",
+      "Promesa de desarrollo ultrarrápido (menos de 24 horas) y transparencia en costos.",
+      "Fomenta la autogestión del cliente mediante capacitación.",
+      "Accesibilidad para proyectos personales y empresariales con cotización por WhatsApp.",
+    ],
+    tech: [
+      { label: "Frontend", value: "Interfaz responsive (HTML/CSS y/o React), tipografía moderna, paleta blanco/gris/verde. JavaScript para interacciones y scroll." },
+      { label: "Hosting y SEO", value: "Despliegue estático, meta Open Graph y Twitter Card para previsualización en redes." },
+    ],
+    tags: ["Diseño web", "Emprendimientos", "Landing", "WhatsApp", "Pago único", "Portafolio"],
+  },
+  {
+    id: "dentista-ejemplo",
+    title: "Ejemplo página de dentista",
+    tagline: "Sitio corporativo de consultorio dental",
+    url: "https://dra-daniela-vera.vercel.app",
+    images: [
+      { src: "/portfolio/dentista-ejemplo.png", alt: "Sección Sobre mí de la página de dentista" },
+    ],
+    description: "Sitio web corporativo de consultorio dental en Providencia, Santiago. La web muestra servicios, formación y forma de trabajo para que los pacientes conozcan la atención y puedan contactar fácilmente. Funcionalidades para pacientes: ver tratamientos (limpieza, tapaduras, carillas, exodoncias), horarios, métodos de pago (efectivo, transferencia, tarjeta), agenda por WhatsApp, ubicación con mapa y acceso a testimonios, galería y preguntas frecuentes. La web es simple, profesional y pensada para móvil, con botones claros para agendar por WhatsApp y datos de contacto siempre visibles.",
+    highlights: [
+      "Secciones claras: Inicio, Sobre mí, Tratamientos, Horario, Métodos de pago, Contacto.",
+      "Agenda por WhatsApp con mensaje predefinido para agendar hora.",
+      "Páginas internas: Tratamientos, Testimonios, Galería clínica y FAQ.",
+      "Diseño adaptable (móvil y escritorio) e integración con Google Maps.",
+    ],
+    tech: [
+      { label: "Frontend", value: "HTML5 + CSS3 puro (sin frameworks), tipografía Manrope, diseño minimalista y responsive." },
+      { label: "Funcionalidad y hosting", value: "JavaScript vanilla para menú, scroll suave y comportamiento básico. Despliegue estático en Vercel. Meta Open Graph, Twitter Card y favicon." },
+    ],
+    tags: ["Odontología", "Salud dental", "WhatsApp", "Landing", "HTML/CSS", "Sitio estático"],
+  },
+  {
     id: "cortate",
     title: "CÓRTATE.CL",
     tagline: "Plataforma de reservas y cortes al instante",
@@ -49,12 +91,12 @@ const projects = [
     tags: ["Exportación", "Cítricos", "Chile", "Corporativo"],
   },
   {
-    id: "despedida-biotti",
-    title: "Despedida de Solteros Biotti",
+    id: "despedida-solteros",
+    title: "Despedida de solteros",
     tagline: "La Última Vuelta — Floripa 2026",
     url: "https://despedidabiotti.vercel.app/",
     images: [
-      { src: "/portfolio/despedida-biotti.png", alt: "Landing de la despedida de solteros Biotti" },
+      { src: "/portfolio/despedida-biotti.png", alt: "Landing de despedida de solteros" },
     ],
     description: "Página única para una despedida de soltero: cuenta regresiva hasta la fecha del evento, cronograma de vuelos (ida y vuelta), lista del crew confirmado y en pendiente, y sección de videos. Diseño con estética tipo misión/aventura, ideal para compartir un solo link con los invitados.",
     highlights: [
