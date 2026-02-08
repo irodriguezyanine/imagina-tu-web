@@ -112,7 +112,9 @@ const projects = [
 ];
 
 const projectOrder: string[] = ["cortate", "agrosouthwest", "despedida-solteros", "dentista-ejemplo", "imaginatuweb"];
-const orderedProjects = projectOrder.map((id) => projects.find((p) => p.id === id)).filter(Boolean);
+const orderedProjects = projectOrder
+  .map((id) => projects.find((p) => p.id === id))
+  .filter((p): p is (typeof projects)[number] => p != null);
 
 export default function PortafolioPage() {
   return (
