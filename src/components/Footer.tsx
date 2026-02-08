@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Instagram, Linkedin, MessageCircle } from "lucide-react";
-import { WHATSAPP } from "@/lib/constants";
+import { Instagram, Linkedin, MessageCircle, Mail, MapPin } from "lucide-react";
+import { WHATSAPP, CONTACT } from "@/lib/constants";
 
 const footerLinks = [
   { href: "/", label: "Inicio" },
@@ -36,6 +36,19 @@ export function Footer() {
             <p className="mt-2 text-sm text-slate-400 max-w-xs">
               Diseño web humano en tiempo récord. Pago único, sin cuotas.
             </p>
+            <div className="mt-4 flex flex-col gap-2 text-sm text-slate-400">
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="inline-flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Mail className="w-4 h-4 shrink-0" />
+                {CONTACT.email}
+              </a>
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="w-4 h-4 shrink-0" />
+                {CONTACT.address}
+              </span>
+            </div>
           </motion.div>
 
           <div className="flex flex-col sm:flex-row gap-6">
