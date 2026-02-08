@@ -6,11 +6,12 @@ import { Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { WHATSAPP } from "@/lib/constants";
 
 const footerLinks = [
-  { href: "#showcase", label: "Portafolio" },
-  { href: "#services", label: "Servicios" },
-  { href: "#why-us", label: "Por qué nosotros" },
-  { href: "#pricing", label: "Precios" },
-  { href: "#equipo", label: "Equipo" },
+  { href: "/", label: "Inicio" },
+  { href: "/cumpleanos", label: "Cumpleaños" },
+  { href: "/matrimonios", label: "Matrimonios" },
+  { href: "/eventos", label: "Eventos" },
+  { href: "/web-profesional", label: "Web profesional" },
+  { href: "/web-empresas", label: "Web empresas" },
 ];
 
 const socialLinks = [
