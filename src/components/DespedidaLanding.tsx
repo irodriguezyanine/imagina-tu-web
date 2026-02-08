@@ -197,11 +197,17 @@ function FeatureModal({
   );
 }
 
-export function DespedidaLanding() {
-  const [modalFeature, setModalFeature] = useState<FeatureItem | null>(null);
+const MainWrapper = "div";
 
-  const content = (
-    <div role="main" className="min-h-screen bg-slate-950">
+function DespedidaLandingContent({
+  modalFeature,
+  setModalFeature,
+}: {
+  modalFeature: FeatureItem | null;
+  setModalFeature: (f: FeatureItem | null) => void;
+}) {
+  return (
+    <MainWrapper role="main" className="min-h-screen bg-slate-950">
       {/* Hero: foto de fiesta de fondo + overlay morado */}
       <section
         className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden"
@@ -420,8 +426,16 @@ export function DespedidaLanding() {
           />
         )}
       </AnimatePresence>
-    </div>
+    </MainWrapper>
   );
+}
 
-  return content;
+export function DespedidaLanding() {
+  const [modalFeature, setModalFeature] = useState<FeatureItem | null>(null);
+  return (
+    <DespedidaLandingContent
+      modalFeature={modalFeature}
+      setModalFeature={setModalFeature}
+    />
+  );
 }
