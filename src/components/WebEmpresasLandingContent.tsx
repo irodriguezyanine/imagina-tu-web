@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import {
   MessageCircle,
@@ -192,13 +191,13 @@ export function WebEmpresasLandingContent({ modalFeature, setModalFeature }: Pro
         className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden"
       >
         <div className="absolute inset-0">
-          <Image
+          <img
             src="/web-empresas-bg.png"
             alt=""
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="100vw"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-800/75 to-stone-950/90" />
