@@ -17,13 +17,14 @@ export function BrowserMockup({
   variant = "profesionales",
   displayUrl = "sitio.ejemplo.cl",
 }: BrowserMockupProps) {
+  /** Tres tonos de gris distintos: oscuro (eventos), claro (profesionales), medio (comercio) */
   const variants = {
     eventos:
-      "bg-gradient-to-b from-slate-950 via-violet-950/95 to-slate-950 border-violet-500/20 shadow-xl shadow-violet-950/20",
+      "bg-gradient-to-b from-slate-800 via-slate-800/98 to-slate-900 border-slate-600/30 shadow-xl shadow-slate-900/25",
     profesionales:
       "bg-white border-slate-200 shadow-lg shadow-slate-200/50",
     comercio:
-      "bg-white border-slate-200 shadow-lg shadow-slate-200/50",
+      "bg-gradient-to-b from-slate-100 to-slate-50 border-slate-300/60 shadow-lg shadow-slate-300/30",
   };
 
   return (
@@ -43,7 +44,9 @@ export function BrowserMockup({
         className={cn(
           "flex items-center gap-2 px-4 py-3 border-b",
           variant === "eventos"
-            ? "bg-slate-900/90 border-slate-700/80"
+            ? "bg-slate-900/90 border-slate-600/50"
+            : variant === "comercio"
+            ? "bg-slate-200/80 border-slate-300"
             : "bg-slate-100/90 border-slate-200"
         )}
       >
@@ -56,7 +59,9 @@ export function BrowserMockup({
           className={cn(
             "flex-1 min-w-0 mx-3 py-2 px-4 rounded-lg text-xs font-mono truncate",
             variant === "eventos"
-              ? "bg-slate-800/90 text-slate-400 border border-slate-700/50"
+              ? "bg-slate-700/80 text-slate-400 border border-slate-600/50"
+              : variant === "comercio"
+              ? "bg-white text-slate-500 border border-slate-300"
               : "bg-white text-slate-500 border border-slate-200"
           )}
         >
