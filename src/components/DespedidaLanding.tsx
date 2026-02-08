@@ -206,8 +206,7 @@ function DespedidaLandingContent({
   modalFeature: FeatureItem | null;
   setModalFeature: (f: FeatureItem | null) => void;
 }) {
-  return (
-    <MainWrapper role="main" className="min-h-screen bg-slate-950">
+  return (<MainWrapper role="main" className="min-h-screen bg-slate-950">
       {/* Hero: foto de fiesta de fondo + overlay morado */}
       <section
         className="relative min-h-[85vh] flex flex-col items-center justify-center px-4 py-24 overflow-hidden"
