@@ -111,6 +111,9 @@ const projects = [
   },
 ];
 
+const projectOrder: string[] = ["cortate", "agrosouthwest", "despedida-solteros", "dentista-ejemplo", "imaginatuweb"];
+const orderedProjects = projectOrder.map((id) => projects.find((p) => p.id === id)).filter(Boolean);
+
 export default function PortafolioPage() {
   return (
     <main className="min-h-screen bg-slate-50">
@@ -136,7 +139,7 @@ export default function PortafolioPage() {
 
       <section className="pb-20 px-4">
         <div className="max-w-5xl mx-auto space-y-20">
-          {projects.map((project, index) => (
+          {orderedProjects.map((project, index) => (
             <motion.article
               key={project.id}
               initial={{ opacity: 0, y: 24 }}
