@@ -5,40 +5,46 @@ import Image from "next/image";
 
 export function Team() {
   return (
-    <section id="equipo" className="relative py-24 px-4 bg-white overflow-hidden">
-      <div className="max-w-4xl mx-auto">
+    <section id="equipo" className="relative py-28 px-4 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
+      <div className="relative z-10 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          <p className="text-sm font-semibold text-[#25D366] uppercase tracking-widest mb-3">
+            Equipo
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
             Conoce al Fundador
           </h2>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col sm:flex-row items-center gap-8 p-8 rounded-2xl border border-slate-200 bg-slate-50/50"
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col sm:flex-row items-center gap-10 p-10 rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-200/30"
         >
-          <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shrink-0 bg-slate-200">
+          <div className="relative w-40 h-40 sm:w-52 sm:h-52 rounded-2xl overflow-hidden shrink-0 bg-slate-200 ring-4 ring-slate-100">
             <Image
               src="/team/ignacio-rodriguez.png"
               alt="Ignacio Rodríguez Yanine - CEO y Fundador"
               fill
               className="object-cover"
-              sizes="(max-width: 640px) 160px, 192px"
+              sizes="(max-width: 640px) 160px, 208px"
             />
           </div>
-          <div>
-            <h3 className="text-xl font-bold text-slate-900">
+          <div className="text-center sm:text-left">
+            <h3 className="text-2xl font-bold text-slate-900">
               Ignacio Rodríguez Yanine
             </h3>
-            <p className="text-[#25D366] font-semibold mb-2">CEO & Fundador</p>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-[#25D366] font-semibold mb-3">CEO & Fundador</p>
+            <p className="text-slate-600 leading-relaxed max-w-xl">
               Ingeniero Comercial UDD. Lidera Vedisa Remates y fundó CÓRTATE.CL.
               Experiencia en ventas B2B, SaaS y desarrollo de negocios en LATAM.
             </p>
