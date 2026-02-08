@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Users, Database, TrendingUp } from "lucide-react";
 import { Footer } from "@/components/Footer";
+import { Team } from "@/components/Team";
 
 const projects = [
   {
@@ -186,6 +187,8 @@ export default function PortafolioPage() {
           ))}
         </div>
       </section>
+
+      <Team />
 
       <Footer />
     </main>

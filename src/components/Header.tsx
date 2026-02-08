@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-lg">
-      <div className="flex h-16 items-center justify-between px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="flex min-h-[8rem] items-center justify-between px-4 sm:px-6 max-w-7xl mx-auto">
         <Link
           href="/"
           className="shrink-0 flex items-center focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded"
@@ -31,9 +31,9 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="ImaginaTuWeb"
-            width={220}
-            height={48}
-            className="h-10 w-auto object-contain"
+            width={660}
+            height={144}
+            className="h-[7.5rem] w-auto object-contain"
             priority
           />
         </Link>
