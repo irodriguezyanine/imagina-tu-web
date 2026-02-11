@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -336,7 +336,7 @@ function ProjectCard({
   );
 }
 
-export default function PortafolioPage() {
+function PortafolioContent() {
   const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState<PortfolioCategoryTag | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -465,5 +465,21 @@ export default function PortafolioPage() {
 
       <Footer />
     </main>
+  );
+}
+
+function PortafolioFallback() {
+  return (
+    <main className="min-h-screen bg-slate-50 flex items-center justify-center">
+      <div className="animate-pulse text-slate-500">Cargando portafolio...</div>
+    </main>
+  );
+}
+
+export default function PortafolioPage() {
+  return (
+    <Suspense fallback={<PortafolioFallback />}>
+      <PortafolioContent />
+    </Suspense>
   );
 }
