@@ -51,6 +51,32 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    id: "puerto-pacifico",
+    title: "Condominio Puerto Pacífico",
+    tagline: "Departamentos en arriendo primera línea de playa en Viña del Mar",
+    url: "https://www.condominiopuertopacifico.cl/",
+    images: [
+      { src: "/portfolio/puerto-pacifico-home.png", alt: "Página de inicio del Condominio Puerto Pacífico" },
+      { src: "/portfolio/puerto-pacifico-departamentos.png", alt: "Nuestros departamentos en arriendo", caption: "Ver departamentos" },
+    ],
+    description: "Sitio web para arriendo de departamentos en el Condominio Puerto Pacífico, frente a playa Las Salinas en Viña del Mar. Más de 20 años de servicio, propiedad de Dalal Saleme y Enrique Yanine. Cinco departamentos en arriendo, primera línea de playa, con cotizaciones en línea, PDF descargable y compartir por WhatsApp.",
+    highlights: [
+      "Diseño claro y profesional, centrado en los departamentos y la ubicación.",
+      "Cotizaciones en PDF con datos de depósito y compartir por WhatsApp.",
+      "Panel de administración con filtros y búsqueda para cotizaciones y clientes.",
+      "Información de contacto y mapa para llegar al condominio.",
+      "Sitio responsive para móvil y escritorio.",
+    ],
+    tech: [
+      { label: "Frontend", value: "Next.js 14, React, Tailwind CSS, Framer Motion." },
+      { label: "Backend", value: "API Routes, MongoDB, NextAuth." },
+      { label: "Funcionalidades", value: "Generación de PDF (jsPDF), mapa con Leaflet, integración con WhatsApp." },
+      { label: "Hosting y SEO", value: "Despliegue en Vercel, Open Graph y Twitter Cards para vista previa en redes sociales." },
+    ],
+    tags: ["Arriendo vacacional", "Departamentos Viña del Mar", "Primera línea de playa", "Las Salinas", "Cotizaciones en línea", "WhatsApp", "Panel de administración"],
+    categoryTags: ["Arriendo vacacional", "Web empresa"],
+  },
+  {
     id: "cortate",
     title: "CÓRTATE.CL",
     tagline: "Plataforma de reservas y cortes al instante",
@@ -91,6 +117,30 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Exportación", "Cítricos", "Chile", "Corporativo"],
     categoryTags: ["Web empresa"],
+  },
+  {
+    id: "impostor-chile",
+    title: "Impostor Chile",
+    tagline: "Juego de fiesta tipo Spyfall para descubrir al impostor",
+    url: "https://www.elimpostor.cl",
+    images: [
+      { src: "/portfolio/impostor-categorias.png", alt: "Selección de categorías en Impostor Chile" },
+      { src: "/portfolio/impostor-turno.png", alt: "Turno del impostor con pista" },
+      { src: "/portfolio/impostor-primer-turno.png", alt: "Pass and Play: pasar el teléfono al siguiente jugador" },
+    ],
+    description: "Impostor Chile es un juego de fiesta en formato Pass and Play para jugar con un solo celular. Cada jugador recibe un rol secreto: la mayoría son civiles y conocen la palabra secreta; uno o más son impostores y deben fingir que la conocen. El objetivo es descubrir quién miente mientras el impostor intenta pasar desapercibido.",
+    highlights: [
+      "Un solo dispositivo: se pasa el celular entre jugadores; no hace falta un dispositivo por persona.",
+      "Más de 25 categorías: futbolistas internacionales y chilenos, Champions League, Real Madrid, Barcelona, River, Boca, Universidad Católica, famosos chilenos, películas, profesiones, palabras chilenas, países turísticos, mundiales de fútbol, útiles escolares y más.",
+      "Pistas para el impostor: cada palabra tiene pistas para que el impostor pueda participar sin revelar que no conoce la palabra.",
+      "1 a 3 impostores configurable según el número de jugadores. 5 idiomas: español, inglés, portugués, italiano y francés.",
+      "Sin publicidad ni registro: juego gratuito, sin anuncios ni cuenta obligatoria. Diseño móvil con animaciones y modo oscuro.",
+    ],
+    tech: [
+      { label: "Frontend", value: "Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion, Lucide React." },
+    ],
+    tags: ["Pass and Play", "Spyfall", "Móvil", "Modo oscuro"],
+    categoryTags: ["Juegos", "Juegos de mesa"],
   },
   {
     id: "asantec",
@@ -226,56 +276,6 @@ const PROJECTS: Project[] = [
     ],
     tags: ["Diseño web", "Emprendimientos", "Landing", "WhatsApp", "Pago único", "Portafolio"],
     categoryTags: ["Web empresa", "Web profesional"],
-  },
-  {
-    id: "impostor-chile",
-    title: "Impostor Chile",
-    tagline: "Juego de fiesta tipo Spyfall para descubrir al impostor",
-    url: "https://www.elimpostor.cl",
-    images: [
-      { src: "/portfolio/impostor-categorias.png", alt: "Selección de categorías en Impostor Chile" },
-      { src: "/portfolio/impostor-turno.png", alt: "Turno del impostor con pista" },
-      { src: "/portfolio/impostor-primer-turno.png", alt: "Pass and Play: pasar el teléfono al siguiente jugador" },
-    ],
-    description: "Impostor Chile es un juego de fiesta en formato Pass and Play para jugar con un solo celular. Cada jugador recibe un rol secreto: la mayoría son civiles y conocen la palabra secreta; uno o más son impostores y deben fingir que la conocen. El objetivo es descubrir quién miente mientras el impostor intenta pasar desapercibido.",
-    highlights: [
-      "Un solo dispositivo: se pasa el celular entre jugadores; no hace falta un dispositivo por persona.",
-      "Más de 25 categorías: futbolistas internacionales y chilenos, Champions League, Real Madrid, Barcelona, River, Boca, Universidad Católica, famosos chilenos, películas, profesiones, palabras chilenas, países turísticos, mundiales de fútbol, útiles escolares y más.",
-      "Pistas para el impostor: cada palabra tiene pistas para que el impostor pueda participar sin revelar que no conoce la palabra.",
-      "1 a 3 impostores configurable según el número de jugadores. 5 idiomas: español, inglés, portugués, italiano y francés.",
-      "Sin publicidad ni registro: juego gratuito, sin anuncios ni cuenta obligatoria. Diseño móvil con animaciones y modo oscuro.",
-    ],
-    tech: [
-      { label: "Frontend", value: "Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion, Lucide React." },
-    ],
-    tags: ["Juegos", "Juegos de mesa", "Pass and Play", "Spyfall", "Móvil", "Modo oscuro"],
-    categoryTags: ["Juegos", "Juegos de mesa"],
-  },
-  {
-    id: "puerto-pacifico",
-    title: "Condominio Puerto Pacífico",
-    tagline: "Departamentos en arriendo primera línea de playa en Viña del Mar",
-    url: "https://www.condominiopuertopacifico.cl/",
-    images: [
-      { src: "/portfolio/puerto-pacifico-home.png", alt: "Página de inicio del Condominio Puerto Pacífico" },
-      { src: "/portfolio/puerto-pacifico-departamentos.png", alt: "Nuestros departamentos en arriendo", caption: "Ver departamentos" },
-    ],
-    description: "Sitio web para arriendo de departamentos en el Condominio Puerto Pacífico, frente a playa Las Salinas en Viña del Mar. Más de 20 años de servicio, propiedad de Dalal Saleme y Enrique Yanine. Cinco departamentos en arriendo, primera línea de playa, con cotizaciones en línea, PDF descargable y compartir por WhatsApp.",
-    highlights: [
-      "Diseño claro y profesional, centrado en los departamentos y la ubicación.",
-      "Cotizaciones en PDF con datos de depósito y compartir por WhatsApp.",
-      "Panel de administración con filtros y búsqueda para cotizaciones y clientes.",
-      "Información de contacto y mapa para llegar al condominio.",
-      "Sitio responsive para móvil y escritorio.",
-    ],
-    tech: [
-      { label: "Frontend", value: "Next.js 14, React, Tailwind CSS, Framer Motion." },
-      { label: "Backend", value: "API Routes, MongoDB, NextAuth." },
-      { label: "Funcionalidades", value: "Generación de PDF (jsPDF), mapa con Leaflet, integración con WhatsApp." },
-      { label: "Hosting y SEO", value: "Despliegue en Vercel, Open Graph y Twitter Cards para vista previa en redes sociales." },
-    ],
-    tags: ["Arriendo vacacional", "Departamentos Viña del Mar", "Primera línea de playa", "Las Salinas", "Cotizaciones en línea", "WhatsApp", "Panel de administración"],
-    categoryTags: ["Arriendo vacacional", "Web empresa"],
   },
 ];
 
